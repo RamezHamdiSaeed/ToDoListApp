@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E74305D2BBCB87E00F3ECC8 /* InProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E74305C2BBCB87E00F3ECC8 /* InProgressViewController.m */; };
+		1E7430602BBCB93E00F3ECC8 /* DoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E74305F2BBCB93E00F3ECC8 /* DoneViewController.m */; };
+		1E918EE42BBB5CC3006EFA72 /* TasksTable2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E918EE32BBB5CC3006EFA72 /* TasksTable2ViewController.m */; };
 		1E9CC9282BBA18E6003F83EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CC9272BBA18E6003F83EF /* AppDelegate.m */; };
 		1E9CC92B2BBA18E6003F83EF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CC92A2BBA18E6003F83EF /* SceneDelegate.m */; };
 		1E9CC9312BBA18E6003F83EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E9CC92F2BBA18E6003F83EF /* Main.storyboard */; };
 		1E9CC9332BBA18E7003F83EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9CC9322BBA18E7003F83EF /* Assets.xcassets */; };
 		1E9CC9362BBA18E7003F83EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E9CC9342BBA18E7003F83EF /* LaunchScreen.storyboard */; };
 		1E9CC9392BBA18E7003F83EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CC9382BBA18E7003F83EF /* main.m */; };
-		1EDCFD372BBA1D3600C8195F /* StudentAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCFD362BBA1D3600C8195F /* StudentAddViewController.m */; };
-		1EDCFD3A2BBA1D4900C8195F /* StudentInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCFD392BBA1D4900C8195F /* StudentInfoViewController.m */; };
-		1EDCFD3D2BBA1DB600C8195F /* StudentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCFD3C2BBA1DB600C8195F /* StudentsTableViewController.m */; };
-		1EDCFD402BBA1E3400C8195F /* StudentPONSO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCFD3F2BBA1E3400C8195F /* StudentPONSO.m */; };
+		1EDCFD372BBA1D3600C8195F /* TaskAddEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCFD362BBA1D3600C8195F /* TaskAddEditViewController.m */; };
+		1EDCFD402BBA1E3400C8195F /* TaskPONSO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCFD3F2BBA1E3400C8195F /* TaskPONSO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E74305A2BBC9ADE00F3ECC8 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		1E74305B2BBCB87E00F3ECC8 /* InProgressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InProgressViewController.h; sourceTree = "<group>"; };
+		1E74305C2BBCB87E00F3ECC8 /* InProgressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InProgressViewController.m; sourceTree = "<group>"; };
+		1E74305E2BBCB93E00F3ECC8 /* DoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoneViewController.h; sourceTree = "<group>"; };
+		1E74305F2BBCB93E00F3ECC8 /* DoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoneViewController.m; sourceTree = "<group>"; };
+		1E918EE22BBB5CC3006EFA72 /* TasksTable2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TasksTable2ViewController.h; sourceTree = "<group>"; };
+		1E918EE32BBB5CC3006EFA72 /* TasksTable2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TasksTable2ViewController.m; sourceTree = "<group>"; };
 		1E9CC9232BBA18E6003F83EF /* studentsInfoWithLoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = studentsInfoWithLoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9CC9262BBA18E6003F83EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1E9CC9272BBA18E6003F83EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -30,15 +38,10 @@
 		1E9CC9352BBA18E7003F83EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E9CC9372BBA18E7003F83EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E9CC9382BBA18E7003F83EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1EDCFD352BBA1D3600C8195F /* StudentAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentAddViewController.h; sourceTree = "<group>"; };
-		1EDCFD362BBA1D3600C8195F /* StudentAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentAddViewController.m; sourceTree = "<group>"; };
-		1EDCFD382BBA1D4900C8195F /* StudentInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentInfoViewController.h; sourceTree = "<group>"; };
-		1EDCFD392BBA1D4900C8195F /* StudentInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentInfoViewController.m; sourceTree = "<group>"; };
-		1EDCFD3B2BBA1DB600C8195F /* StudentsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentsTableViewController.h; sourceTree = "<group>"; };
-		1EDCFD3C2BBA1DB600C8195F /* StudentsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentsTableViewController.m; sourceTree = "<group>"; };
-		1EDCFD3E2BBA1E3400C8195F /* StudentPONSO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentPONSO.h; sourceTree = "<group>"; };
-		1EDCFD3F2BBA1E3400C8195F /* StudentPONSO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentPONSO.m; sourceTree = "<group>"; };
-		1EDCFD412BBA26E400C8195F /* studentsTableViewDelegator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = studentsTableViewDelegator.h; sourceTree = "<group>"; };
+		1EDCFD352BBA1D3600C8195F /* TaskAddEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskAddEditViewController.h; sourceTree = "<group>"; };
+		1EDCFD362BBA1D3600C8195F /* TaskAddEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskAddEditViewController.m; sourceTree = "<group>"; };
+		1EDCFD3E2BBA1E3400C8195F /* TaskPONSO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskPONSO.h; sourceTree = "<group>"; };
+		1EDCFD3F2BBA1E3400C8195F /* TaskPONSO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskPONSO.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,15 +83,17 @@
 				1E9CC9342BBA18E7003F83EF /* LaunchScreen.storyboard */,
 				1E9CC9372BBA18E7003F83EF /* Info.plist */,
 				1E9CC9382BBA18E7003F83EF /* main.m */,
-				1EDCFD352BBA1D3600C8195F /* StudentAddViewController.h */,
-				1EDCFD362BBA1D3600C8195F /* StudentAddViewController.m */,
-				1EDCFD382BBA1D4900C8195F /* StudentInfoViewController.h */,
-				1EDCFD392BBA1D4900C8195F /* StudentInfoViewController.m */,
-				1EDCFD3B2BBA1DB600C8195F /* StudentsTableViewController.h */,
-				1EDCFD3C2BBA1DB600C8195F /* StudentsTableViewController.m */,
-				1EDCFD3E2BBA1E3400C8195F /* StudentPONSO.h */,
-				1EDCFD3F2BBA1E3400C8195F /* StudentPONSO.m */,
-				1EDCFD412BBA26E400C8195F /* studentsTableViewDelegator.h */,
+				1EDCFD352BBA1D3600C8195F /* TaskAddEditViewController.h */,
+				1EDCFD362BBA1D3600C8195F /* TaskAddEditViewController.m */,
+				1EDCFD3E2BBA1E3400C8195F /* TaskPONSO.h */,
+				1EDCFD3F2BBA1E3400C8195F /* TaskPONSO.m */,
+				1E918EE22BBB5CC3006EFA72 /* TasksTable2ViewController.h */,
+				1E918EE32BBB5CC3006EFA72 /* TasksTable2ViewController.m */,
+				1E74305A2BBC9ADE00F3ECC8 /* Constants.h */,
+				1E74305B2BBCB87E00F3ECC8 /* InProgressViewController.h */,
+				1E74305C2BBCB87E00F3ECC8 /* InProgressViewController.m */,
+				1E74305E2BBCB93E00F3ECC8 /* DoneViewController.h */,
+				1E74305F2BBCB93E00F3ECC8 /* DoneViewController.m */,
 			);
 			path = studentsInfoWithLoc;
 			sourceTree = "<group>";
@@ -163,12 +168,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EDCFD3A2BBA1D4900C8195F /* StudentInfoViewController.m in Sources */,
-				1EDCFD372BBA1D3600C8195F /* StudentAddViewController.m in Sources */,
+				1E74305D2BBCB87E00F3ECC8 /* InProgressViewController.m in Sources */,
+				1EDCFD372BBA1D3600C8195F /* TaskAddEditViewController.m in Sources */,
 				1E9CC9282BBA18E6003F83EF /* AppDelegate.m in Sources */,
-				1EDCFD3D2BBA1DB600C8195F /* StudentsTableViewController.m in Sources */,
 				1E9CC9392BBA18E7003F83EF /* main.m in Sources */,
-				1EDCFD402BBA1E3400C8195F /* StudentPONSO.m in Sources */,
+				1E7430602BBCB93E00F3ECC8 /* DoneViewController.m in Sources */,
+				1E918EE42BBB5CC3006EFA72 /* TasksTable2ViewController.m in Sources */,
+				1EDCFD402BBA1E3400C8195F /* TaskPONSO.m in Sources */,
 				1E9CC92B2BBA18E6003F83EF /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +325,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,6 +352,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
