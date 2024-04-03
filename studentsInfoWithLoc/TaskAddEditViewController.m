@@ -14,8 +14,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *detailsValue;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *periorityValue;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *statusValue;
+@property (weak, nonatomic) IBOutlet UIButton *addUpdateButton;
 
-@property TaskPONSO *taskToBeAdded;
+@property TaskPONSO *taskToBeAdded,*updatedTask;
 @property NSMutableArray *tasks;
 
 
@@ -35,17 +36,18 @@
         _taskToBeAdded.isInProgress=YES;
     }
     else{
+        _addUpdateButton.titleLabel.text=@"Update";
         _titleValue.text=_taskToBeUpdated.title;
         _detailsValue.text=_taskToBeUpdated.details;
 
         
-        if(_taskToBeUpdated.status==@"L"){
+        if([_taskToBeUpdated.status isEqual:@"L"]){
             _periorityValue.selectedSegmentIndex=0;
         }
-        else if(_taskToBeUpdated.status==@"M"){
+        else if([_taskToBeUpdated.status isEqual:@"M"]){
             _periorityValue.selectedSegmentIndex=1;
         }
-        else if(_taskToBeUpdated.status==@"H"){
+        else if([_taskToBeUpdated.status isEqual:@"H"]){
             _periorityValue.selectedSegmentIndex=2;
         }
         
@@ -54,10 +56,19 @@
         }
         else{
             _statusValue.selectedSegmentIndex=1;
+            _statusValue.enabled=NO;
 
         }
 
-        
+        _updatedTask=[TaskPONSO new];
+        _updatedTask.title=_taskToBeUpdated.title;
+        _updatedTask.status=_taskToBeUpdated.status;
+        _updatedTask.isInProgress=_taskToBeUpdated.isInProgress;
+        _updatedTask.details=_taskToBeUpdated.details;
+        _updatedTask.periority=_taskToBeUpdated.periority;
+
+
+
         
 
         
@@ -90,19 +101,37 @@
     switch ([sender selectedSegmentIndex]) {
         case 0:{
             //low
-            self.taskToBeAdded.status=@"L";
+            if(_taskToBeUpdated!=nil){
+
+                self.updatedTask.status=@"L";
+
+            }
+            else{
+                self.taskToBeAdded.status=@"L";
+
+            }
             break;
         }
         case 1:{
             //medium
-            self.taskToBeAdded.status=@"M";
+            if(_taskToBeUpdated!=nil){
+                self.updatedTask.status=@"M";
 
+            }
+            else{
+                self.taskToBeAdded.status=@"M";
+            }
             break;
         }
         case 2:{
             //high
-            self.taskToBeAdded.status=@"H";
+            if(_taskToBeUpdated!=nil){
+                self.updatedTask.status=@"H";
 
+            }
+            else{
+                self.taskToBeAdded.status=@"H";
+            }
             break;
         }
     }
@@ -112,12 +141,23 @@
             
         case 0:{
             //InProgress
-            self.taskToBeAdded.isInProgress=YES;
+            if(_taskToBeUpdated!=nil){
+                self.updatedTask.isInProgress=YES;
+
+            }
+            else{
+                self.taskToBeAdded.isInProgress=YES;
+            }
             break;
         }
         case 1:{
             //done
-            self.taskToBeAdded.isInProgress=NO;
+            if(_taskToBeUpdated!=nil){
+                self.updatedTask.isInProgress=NO;
+
+            }else{
+                self.taskToBeAdded.isInProgress=NO;
+            }
             break;
         }
             
@@ -128,19 +168,42 @@
     if(_taskToBeUpdated==nil){
         self.taskToBeAdded.title=_titleValue.text;
         self.taskToBeAdded.details=_detailsValue.text;
+        
+        _tasks=[self getTasksWithNewTask:(self.taskToBeAdded.isInProgress)?@"INPROGRESS":@"DONE"];
+        if(_tasks==nil){
+            _tasks=[NSMutableArray new];
+        }
+        [_tasks addObject:_taskToBeAdded];
+
+        [self saveTasksWithNewTask:_tasks :(self.taskToBeAdded.isInProgress)?@"INPROGRESS":@"DONE"];
+    }
+    else{
+        
+        _tasks=[self getTasksWithNewTask:(self.taskToBeUpdated.isInProgress)?@"INPROGRESS":@"DONE"];
+        for(int i=0;i<_tasks.count;i++){
+            TaskPONSO *currentTask=[TaskPONSO new];
+            currentTask=[_tasks objectAtIndex:i];
+            if(currentTask.title == _taskToBeUpdated.title){
+                [_tasks removeObjectAtIndex:i];
+
+            }
+        }
+
+        self.updatedTask.title=_titleValue.text;
+        self.updatedTask.details=_detailsValue.text;
+        
+        if(_tasks==nil){
+            _tasks=[NSMutableArray new];
+        }
+        [_tasks addObject:_updatedTask];
+
+        [self saveTasksWithNewTask:_tasks :(self.taskToBeAdded.isInProgress)?@"INPROGRESS":@"DONE"];
+        
+        
     }
 
 
     
-    
-    
-    _tasks=[self getTasksWithNewTask:(self.taskToBeAdded.isInProgress)?@"INPROGRESS":@"DONE"];
-    if(_tasks==nil){
-        _tasks=[NSMutableArray new];
-    }
-    [_tasks addObject:_taskToBeAdded];
-
-    [self saveTasksWithNewTask:_tasks :(self.taskToBeAdded.isInProgress)?@"INPROGRESS":@"DONE"];
     [self.navigationController popViewControllerAnimated:YES];
 }
 -(void) saveTasksWithNewTask:(NSMutableArray *)tasksToBeSaved :(NSString*)status{
