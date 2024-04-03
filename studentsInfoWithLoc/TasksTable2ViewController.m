@@ -35,6 +35,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+    }
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+//    if(_taskToBeAdded!=nil){
+//        NSLog(@"1transfered task ponso from the add screen: %@",_taskToBeAdded);
+//        [currentTasks addObject:_taskToBeAdded];
+//        [self.tableView reloadData];
+//        _taskToBeAdded=nil;
+//    }
+//    NSLog(@"2transfered task ponso from the add screen: %@",_taskToBeAdded);
     currentTasks=[NSMutableArray new];
     isSearchOperation=NO;
 
@@ -82,17 +94,6 @@
     
     
     
-    }
-
--(void)viewWillAppear:(BOOL)animated{
-    
-//    if(_taskToBeAdded!=nil){
-//        NSLog(@"1transfered task ponso from the add screen: %@",_taskToBeAdded);
-//        [currentTasks addObject:_taskToBeAdded];
-//        [self.tableView reloadData];
-//        _taskToBeAdded=nil;
-//    }
-//    NSLog(@"2transfered task ponso from the add screen: %@",_taskToBeAdded);
 }
 - (IBAction)addTask:(id)sender {
     TaskAddEditViewController *studentVC=[self.storyboard instantiateViewControllerWithIdentifier:@"TaskAddViewController"];
